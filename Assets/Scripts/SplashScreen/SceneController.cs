@@ -11,6 +11,6 @@ public class SceneController : MonoBehaviour
 
      void LoadNextScene()
     {
-        SceneManager.LoadScene("Juego");
+        SceneManager.LoadScene("MainMenu");
     }
 }
