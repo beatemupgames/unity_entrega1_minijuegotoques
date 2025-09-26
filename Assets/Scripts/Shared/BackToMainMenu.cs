@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement; // Necesario para poder cargar otras escenas
 
-public class Back : MonoBehaviour
+public class BackToMainMenu : MonoBehaviour
 {
-    public void BackToMainMenu()
+    public void BackToMainMenuScene()
     {
         SceneManager.LoadScene("MainMenu");
     }

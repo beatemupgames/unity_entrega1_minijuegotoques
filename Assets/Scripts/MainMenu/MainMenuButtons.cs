@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement; // Necesario para poder cargar otras escenas
 
-public class Buttons : MonoBehaviour
+public class MainMenuButtons : MonoBehaviour
 {
     public void Play()
     {
