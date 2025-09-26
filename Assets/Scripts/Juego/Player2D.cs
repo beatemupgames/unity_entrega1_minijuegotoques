@@ -26,6 +26,14 @@ public class Player2D : MonoBehaviour
         // --> Multiplicarlo por la variable con la velocidad y ajustarlo al framerate
 
         this.gameObject.transform.Translate(Input.GetAxis("Horizontal") * velocidad * Time.deltaTime, 0.0f, 0.0f);
+
+
+        // Extra: limitar el desplazamiento en el eje x
+        // --> Que el Player2D no salga del escenario, ni por la izquierda ni por la derecha
+
+        Vector2 pos = this.gameObject.transform.position;
+        pos.x = Mathf.Clamp(pos.x, -1.6f, 1.6f);
+        this.gameObject.transform.position = pos;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -38,12 +46,6 @@ public class Player2D : MonoBehaviour
         {
             puntuacion++;
             puntuacionUI.gameObject.GetComponent<TMP_Text>().text = "Score: " + puntuacion.ToString();
-
-
-            /*if(other.gameObject.GetComponent<Rigidbody2D>().gravityScale < 4.0f)
-                other.gameObject.GetComponent<Rigidbody2D>().gravityScale += 0.25f;
-
-            print(other.gameObject.GetComponent<Rigidbody2D>().gravityScale);*/
         }
     }
 }
