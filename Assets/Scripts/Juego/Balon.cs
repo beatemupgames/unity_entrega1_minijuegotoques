@@ -11,7 +11,7 @@ public class Balon : MonoBehaviour
     {
         // Asignar a panelDerrota el GameObject PanelDerrota
 
-        panelDerrota = (GameObject)GameObject.FindGameObjectWithTag("PanelDerrota");
+        panelDerrota = (GameObject) GameObject.FindGameObjectWithTag("PanelDerrota");
 
 
         // Ocultar panelDerrota
@@ -44,7 +44,7 @@ public class Balon : MonoBehaviour
             // Extra: bloquear el movimiento de Player2D tras finalizar una partida
             // --> El usuario no podrá mover Player2D una vez haya perdido
     
-            GameObject player2D = GameObject.FindWithTag("Player2D");
+            GameObject player2D = (GameObject) GameObject.FindGameObjectWithTag("Player2D");
 
             if (player2D != null)
                 player2D.GetComponent<Player2D>().enabled = false;

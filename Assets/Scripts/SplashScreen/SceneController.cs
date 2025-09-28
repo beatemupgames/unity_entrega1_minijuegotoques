@@ -9,7 +9,7 @@ public class SceneController : MonoBehaviour
         Invoke("LoadNextScene", 3.0f);
     }
 
-     void LoadNextScene()
+    private void LoadNextScene()
     {
         SceneManager.LoadScene("MainMenu");
     }
